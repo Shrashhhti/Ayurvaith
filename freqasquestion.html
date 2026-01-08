@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayurvaith | FAQs</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+    }
+
+    /* NAVBAR */
+    .topbar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .topbar__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand__logo_img {
+      width: 50px;
+    }
+
+    .brand__name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* FAQ SECTION */
+    .faq-section {
+      padding: 60px 0;
+    }
+
+    .faq-title {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 40px;
+    }
+
+    /* ACCORDION */
+    details {
+      background: #ffffff;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      padding: 18px 22px;
+      cursor: pointer;
+      border-left: 5px solid #2e7d32;
+    }
+
+    summary {
+      list-style: none;
+      font-weight: bold;
+      color: #2e7d32;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "▶";
+      font-size: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(90deg);
+    }
+
+    details p {
+      margin-top: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #07350a;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <div class="brand">
+      <img class="brand__logo_img" src="assets/ayurvaith imag.jpg" alt="Ayurvaith logo">
+      <div class="brand__name">Ayurvaith</div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html">Product</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- FAQ CONTENT -->
+<section class="faq-section">
+  <div class="container">
+
+    <h1 class="faq-title">Frequently Asked Questions</h1>
+
+    <details>
+      <summary>The Pink Gold of the Himalayas: A Pure Alternative to Table Salt</summary>
+      <p>
+        Himalayan pink salt is a mineral-rich salt mined from ancient sea beds
+        in the Himalayan foothills. Untouched by modern pollution, its natural
+        pink colour reflects the presence of valuable trace minerals.
+      </p>
+    </details>
+
+    <details>
+      <summary>How Is Himalayan Pink Salt Better Than Normal Table Salt?</summary>
+      <p>
+        Normal table salt is heavily refined and stripped of minerals, often
+        containing anti-caking agents. Himalayan salt is minimally processed
+        and retains essential minerals like potassium, magnesium, calcium,
+        and iron.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why Should You Prefer Himalayan Salt?</summary>
+      <p>
+        Himalayan salt offers a cleaner seasoning without artificial additives,
+        a softer and more balanced flavour, and better dietary balance that
+        supports hydration and muscle function.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why Choose Ayurvaith Fine Himalayan Pink Salt?</summary>
+      <p>
+        Ayurvaith Fine Himalayan Pink Salt is 100% natural, mineral-rich, and
+        organically sourced. It is free from industrial processing and modern
+        contaminants, delivering pure Himalayan goodness.
+      </p>
+    </details>
+
+    <details>
+      <summary>What Makes Ayurvaith Turmeric Powder Special?</summary>
+      <p>
+        Ayurvaith Turmeric Powder is made from organically grown turmeric roots,
+        traditionally processed to preserve colour, aroma, and medicinal value.
+        It contains no preservatives, artificial colours, or chemicals.
+      </p>
+    </details>
+
+    <details>
+      <summary>What Are the Health Benefits of Ayurvaith Turmeric Powder?</summary>
+      <p>
+        Rich in natural curcumin, Ayurvaith Turmeric helps boost immunity,
+        improve digestion, reduce inflammation, and promote healthy skin.
+        It is suitable for daily cooking and skincare use.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why Choose Ayurvaith Turmeric Powder?</summary>
+      <p>
+        Ayurvaith Turmeric Powder is 100% organic, chemical-free, high in
+        curcumin, traditionally processed, and safe for daily consumption
+        with superior quality and aroma.
+      </p>
+    </details>
+
+  </div>
+</section>
+<footer class="footer">
+  <p class="footer__copy" style="margin-left: 120px;">
+    © Ayurvaith. All Rights Reserved.
+    <span class="footer-sep">|</span>
+    <a  style="color: #ffffff;" href="https://innovaneers.in" target="_blank" rel="noopener">
+      Developed by Innovaneers Technologies
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
