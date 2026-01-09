@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ayurvaith | Contact</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- 🔒 CONTACT PAGE CSS (SAME AS HOME) -->
+  <style>
+    .contact-scope {
+      background: #f6f6f6;
+      padding: 80px 0;
+    }
+
+    .contact-scope .contact-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #2e7d32;
+      font-size: 36px;
+    }
+
+    .contact-scope .contact-flex {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-scope .contact-card {
+      background: #ffffff;
+      flex: 1;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .contact-scope .contact-card h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    .contact-scope .contact-card p {
+      margin: 12px 0;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .contact-scope .map-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #2e7d32;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .contact-scope .map-btn:hover {
+      background: #1b5e20;
+    }
+
+    @media (max-width: 768px) {
+      .contact-scope .contact-flex {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <div class="brand">
+      <div class="brand__logo">
+        <img class="brand__logo_img" src="assets/ayurvaith imag.jpg" alt="Ayurvaith logo">
+      </div>
+      <div class="brand__name">Ayurvaith</div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html">Product</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="contact-scope">
+  <div class="container">
+
+    <h1 class="contact-title">Get in Touch</h1>
+
+    <div class="contact-flex">
+
+      <div class="contact-card">
+        <h2>Contact Information</h2>
+        <p><strong>📞 Phone:</strong> 8795557772, 8707358580</p>
+        <p><strong>📧 Email:</strong> helpdesk@ayurvaith.com</p>
+        <p><strong>📍 Address:</strong> Kanpur, Uttar Pradesh</p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Our Location</h2>
+        <p>
+          60/52, Nayaganj<br>
+          Pipal wali Kothi<br>
+          Kanpur
+        </p>
+        <a class="map-btn"
+           href="https://maps.app.goo.gl/5ykSZjnWiybPxkH1A"
+           target="_blank">
+          View on Google Maps
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer__copy">
+    © Ayurvaith. All Rights Reserved.
+    <span class="footer-sep">|</span>
+    <a href="https://innovaneers.in" target="_blank">
+      Developed by Innovaneers Technologies
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
