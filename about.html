@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Ayurvaith</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <div class="brand">
+      <div class="brand__logo">
+        <img class="brand__logo_img" src="assets/ayurvaith imag.jpg" alt="Ayurvaith logo">
+      </div>
+      <div>
+        <div class="brand__name">Ayurvaith</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html">Product</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ABOUT SECTION (ONLY SECTION ON PAGE) -->
+<section class="section about-section">
+  <div class="container about-inner">
+
+    <!-- LEFT SIDE : TEXT -->
+    <div class="about-text card">
+      <h2>About Ayurvaith</h2>
+      <p>
+        Ayurvaith is an Indian FMCG brand inspired by the timeless wisdom of
+        Ayurveda and crafted to meet modern food safety standards. We believe
+        that true wellness begins with pure, hygienic, and thoughtfully
+        prepared food.
+      </p>
+
+      <p>
+        Our products—salt, spices, and dry fruits—are carefully sourced and
+        processed to retain their natural goodness and authentic taste. By
+        blending traditional knowledge with modern quality control, we ensure
+        consistency, safety, and trust in every pack.
+      </p>
+
+      <p>
+        As an FSSAI-certified brand, Ayurvaith is committed to transparency,
+        reliability, and long-term health, bringing nature’s purity to Indian
+        kitchens every day.
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE : DRY FRUITS IMAGE -->
+    <div class="about-visual">
+      <img
+        src="assets/about%20img.webp"
+        alt="Premium dry fruits">
+    </div>
+
+  </div>
+</section>
+<footer class="footer">
+  <p class="footer__copy" style="margin-left: 420px;">
+    © Ayurvaith. All Rights Reserved.
+    <span class="footer-sep">|</span>
+    <a href="https://innovaneers.in" target="_blank" rel="noopener">
+      Developed by Innovaneers Technologies
+    </a>
+  </p>
+</footer>
+
+<script>
+// Scale the about image based on its position relative to viewport center.
+(() => {
+  const img = document.querySelector('.about-visual img');
+  if (!img) return;
+
+  function applyScale() {
+    const rect = img.getBoundingClientRect();
+    const vpH = window.innerHeight || document.documentElement.clientHeight;
+    // distance from element center to viewport center (px)
+    const elemCenter = rect.top + rect.height / 2;
+    const dist = Math.abs(elemCenter - vpH / 2);
+    // normalized distance (0 when centered, 1 when fully off-center beyond vpH/2)
+    const norm = Math.min(1, dist / (vpH / 2));
+    // scale from 1.03 (centered) down to 1.00 (far)
+    const scale = 1 + (1 - norm) * 0.03;
+    img.style.transform = `scale(${scale})`;
+  }
+
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        applyScale();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  applyScale();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', applyScale);
+})();
+</script>
+
+<script>
+// Match the right image width to the left text block width (pixels), without changing text.
+(function() {
+  const img = document.querySelector('.about-visual img');
+  const text = document.querySelector('.about-text');
+  if (!img || !text) return;
+
+  function fitImageToText() {
+    // compute width of the text block (including padding)
+    const textWidth = text.clientWidth;
+
+    // set image width to match the text block width (at least 80px)
+    const desired = Math.max(80, Math.floor(textWidth)); // match text width
+    img.style.width = desired + 'px';
+    img.style.height = 'auto';
+  }
+
+  // initial fit
+  fitImageToText();
+
+  // update on resize and when fonts/images may change layout
+  let raf = null;
+  function onResize() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      fitImageToText();
+      raf = null;
+    });
+  }
+
+  window.addEventListener('resize', onResize, { passive: true });
+  // also refit after fonts load (safe fallback)
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitImageToText);
+})();
+</script>
+
+</body>
+</html>
